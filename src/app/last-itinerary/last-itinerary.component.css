@@ -6,17 +6,38 @@
     flex-direction: column;
 }
 #itinerary-history{
-    width: 70vw;
+    width: 74vw;
+    margin: 10px 0;
+    background-color: #F4F4F2;
 }
+@media screen and (max-width: 400px){
+    #itinerary-history{
+        width: 80vw;
+    }
+  }
 .btn-box{
     display: flex;
     flex-direction: row-reverse;
 }
-.btn-box >button{
+button{
     background-color: #BBBFCA;
     padding: 10px;
     border-radius: 15%;
     border:0;
     -webkit-box-shadow: 5px 5px 17px 7px rgba(0, 0, 0, 0.109); 
     box-shadow: 5px 5px 17px 7px rgba(0, 0, 0, 0.109);
+    margin: 10px;
+}
+#itin-item{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    border-bottom: 1px solid  #BBBFCA ;
+}
+#page-navigation{
+    display: flex;
+    flex-direction: row;
+    width:inherit;
+    justify-content: space-between;
+    padding:20px;
 }

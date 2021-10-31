@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -16,7 +16,6 @@ import { LastItineraryComponent } from './last-itinerary/last-itinerary.componen
     AppComponent,
     PostFixtureComponent,
     HomeDashComponent,
-    MatExpansionModule,
     LastItineraryComponent
   ],
   imports: [
@@ -25,10 +24,10 @@ import { LastItineraryComponent } from './last-itinerary/last-itinerary.componen
     BrowserAnimationsModule,
     MatSidenavModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
