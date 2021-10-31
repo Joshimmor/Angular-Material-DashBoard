@@ -1,19 +1,32 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
-        <div class="selection">text</div>
-        <div class="selection">text</div>
-        <div class="selection">text</div>
-        <div class="selection">text</div>
-        <div class="selection">text</div>
+          <div class="user-info">
+
+          </div>
+         <ul id="nav-ul">
+            <li >
+              <a class="selection" href="#">Text</a>
+            </li>
+            <li>
+              <a class="selection" href="#">Text</a>
+            </li>
+            <li>
+              <a class="selection" href="#">Text</a>
+            </li>
+            <li>
+              <a class="selection" href="#">Text</a>
+            </li>
+         </ul>
     </mat-drawer>
   
     <div class="Main">
+      <app-home-dash></app-home-dash>
       <button type="button" id="toggle-button" mat-button (click)="drawer.toggle()">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
+      <app-last-itinerary class="first-rend"></app-last-itinerary>
     </div>
   
   </mat-drawer-container>
