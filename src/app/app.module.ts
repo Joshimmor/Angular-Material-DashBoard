@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +27,7 @@ import { LastItineraryComponent } from './last-itinerary/last-itinerary.componen
     MatGridListModule,
     MatCardModule,
     MatExpansionModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
