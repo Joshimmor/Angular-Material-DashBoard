@@ -22,12 +22,18 @@
   
     <div class="Main">
       <app-home-dash></app-home-dash>
-      <button type="button" id="toggle-button" mat-button (click)="drawer.toggle()">
+      <button type="button" id="toggle-button"  (click)="drawer.toggle()">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <app-last-itinerary class="first-rend"></app-last-itinerary>
+      <!------------
+       <app-last-itinerary class="first-rend"></app-last-itinerary>
+       <app-post-fixture-edit ></app-post-fixture-edit>
+       <app-post-fixture-itin-update></app-post-fixture-itin-update>
+      -->
+      
+      <app-post-fixture-edit ></app-post-fixture-edit>
     </div>
   
   </mat-drawer-container>

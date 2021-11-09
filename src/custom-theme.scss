@@ -27,7 +27,12 @@ $ang-Boilerplate-theme: mat.define-light-theme((
     warn: $ang-Boilerplate-warn,
   )
 ));
-
+.mat-form-field-flex{
+  width: 200px !important;
+}
+.mat-card .mat-divider-horizontal{
+  position: relative  !important;
+}
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.

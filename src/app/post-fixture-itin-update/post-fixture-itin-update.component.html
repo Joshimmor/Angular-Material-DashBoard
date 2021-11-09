@@ -1,0 +1,88 @@
+<mat-card style="margin-top: 5vh;" class="form-container">
+    <div class="header">
+        <mat-card-title>
+            Itinerary Updates
+        </mat-card-title>
+    </div>
+    <mat-divider style="width:90%"></mat-divider>
+        <p class="col">
+            <mat-form-field appearance="legacy">
+                <mat-label>Fixture Status</mat-label>
+                <mat-select [(ngModel)]="FixtureStatus" name="fixtureStatus">
+                <mat-option value="hello" >
+                hello
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p> 
+        <p class="col">
+            <mat-form-field class="example-full-width" appearance="legacy">
+                <mat-label>Last Port</mat-label>
+                <input type="text"
+                    placeholder="Pick one"
+                    aria-label="Number"
+                    matInput
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                    <mat-icon matSuffix>widgets</mat-icon>
+                    <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-hint>Last Port</mat-hint>
+            </mat-form-field>
+        </p> 
+        <p class="col">
+            <mat-form-field appearance="legacy">
+                <mat-label>Sailed Date</mat-label>
+                <input matInput [matDatepicker]="LayDate">
+                <mat-datepicker-toggle matSuffix [for]="LayDate"></mat-datepicker-toggle>
+                <mat-datepicker #LayDate></mat-datepicker>
+            </mat-form-field>
+        </p>    
+        
+        <p class="col">
+            <mat-form-field class="example-full-width" appearance="legacy">
+                <mat-label>Next Port</mat-label>
+                <input type="text"
+                    placeholder="Pick one"
+                    aria-label="Number"
+                    matInput
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                    <mat-icon matSuffix>widgets</mat-icon>
+                    <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-hint>Next Port</mat-hint>
+            </mat-form-field>
+        </p>
+        <p class="col">
+            <mat-form-field appearance="legacy">
+                <mat-label>Arrival Date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </p>  
+        <p class="col" style="width: 200px;display: flex;justify-content: center;">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">ETA</mat-radio-button>
+                &nbsp;
+                <mat-radio-button value="2">Arrival</mat-radio-button>
+              </mat-radio-group>
+        </p> 
+        <p style="width: 70%;display: flex;justify-content: center;">
+            <mat-form-field appearance="legacy" style="width: 100% !important;">
+                <mat-label style="width: 100%;">Textarea</mat-label>
+                <textarea style="width: 100%;" matInput></textarea>
+              </mat-form-field>
+        </p>
+</mat-card>
+<div class="sumbit-row">
+    <button mat-button>Submit</button>
+    <button mat-button>Cancel</button>
+</div>

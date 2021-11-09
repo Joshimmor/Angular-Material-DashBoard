@@ -1,0 +1,163 @@
+<mat-card style="margin-top: 5vh;" class="form-container">
+    <div class="header">
+        <mat-card-title>
+            Fixture Updates
+        </mat-card-title>
+    </div>
+    <mat-divider style="width:90%"></mat-divider>
+    
+    <p class="col">
+        <mat-form-field appearance="legacy">
+          <mat-label>Legacy form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>tag</mat-icon>
+          <mat-hint>Fixture Number</mat-hint>
+        </mat-form-field>
+    </p>
+    <p class="col">
+        <mat-form-field appearance="legacy">
+            <mat-label>Fixture Status</mat-label>
+            <mat-select [(ngModel)]="FixtureStatus" name="fixtureStatus">
+            <mat-option value="hello" >
+               hello
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p> 
+    <p class="col">
+        <mat-form-field appearance="legacy">
+          <mat-label>Legacy form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>copyright</mat-icon>
+          <mat-hint>Effective Control</mat-hint>
+        </mat-form-field>
+    </p>
+    <p class="col">
+        <mat-form-field appearance="legacy">
+          <mat-label>Legacy form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>tag</mat-icon>
+          <mat-hint>Effective Control Ref</mat-hint>
+        </mat-form-field>
+    </p>
+    <p class="col">
+        <mat-form-field appearance="legacy">
+          <mat-label>Legacy form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>map</mat-icon>
+          <mat-hint>Chaterer</mat-hint>
+        </mat-form-field>
+    </p>
+    <p class="col">
+        <mat-form-field class="example-full-width" appearance="legacy">
+             <mat-label>Charter Ref</mat-label>
+             <input type="text"
+                placeholder="Charter Ref"
+                aria-label="Number"
+                matInput
+                [formControl]="myControl"
+                [matAutocomplete]="auto">
+                <mat-icon matSuffix>tag</mat-icon>
+                <mat-autocomplete #auto="matAutocomplete"> 
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                 {{option}}
+                </mat-option>
+            </mat-autocomplete>
+            <mat-hint>Charter Ref</mat-hint>
+        </mat-form-field>
+    </p>   
+    <p class="col">
+        <mat-form-field appearance="legacy">
+            <mat-label>Operator</mat-label>
+            <mat-select [(ngModel)]="FixtureStatus" name="fixtureStatus">
+            <mat-option value="hello" >
+               hello
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>    
+    <p class="col">
+        <mat-form-field appearance="legacy">
+            <mat-label>Fixture Desk</mat-label>
+            <mat-select [(ngModel)]="FixtureStatus" name="fixtureStatus">
+            <mat-option value="hello" >
+               hello
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>    
+</mat-card>
+
+    <mat-card class="form-container  ">
+        <div class="header">
+            <mat-card-title>
+                Date Updates
+            </mat-card-title>
+        </div>
+        <mat-divider style="width:90%"></mat-divider>
+        <p class="col">
+            <mat-form-field appearance="legacy">
+                <mat-label>Charter Party Date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </p>    
+        <p class="col">
+            <mat-form-field appearance="legacy">
+                <mat-label>Lay Date</mat-label>
+                <input matInput [matDatepicker]="LayDate">
+                <mat-datepicker-toggle matSuffix [for]="LayDate"></mat-datepicker-toggle>
+                <mat-datepicker #LayDate></mat-datepicker>
+            </mat-form-field>
+        </p>    
+        
+    </mat-card>
+    <mat-card class="form-container ">
+        <div class="header">
+            <mat-card-title>
+                Port Updates
+            </mat-card-title>
+        </div>
+        <mat-divider style="width:90%"></mat-divider>
+        <p class="col">
+            <mat-form-field class="example-full-width" appearance="legacy">
+                <mat-label>Last Port</mat-label>
+                <input type="text"
+                    placeholder="Pick one"
+                    aria-label="Number"
+                    matInput
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                    <mat-icon matSuffix>widgets</mat-icon>
+                    <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-hint>Last Port</mat-hint>
+            </mat-form-field>
+        </p>
+        <p class="col">
+            <mat-form-field class="example-full-width" appearance="legacy">
+                <mat-label>Next Port</mat-label>
+                <input type="text"
+                    placeholder="Pick one"
+                    aria-label="Number"
+                    matInput
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                    <mat-icon matSuffix>widgets</mat-icon>
+                    <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-hint>Next Port</mat-hint>
+            </mat-form-field>
+        </p>
+    </mat-card>
+ <div class="sumbit-row">
+     <button mat-button>Submit</button>
+     <button mat-button>Cancel</button>
+ </div>

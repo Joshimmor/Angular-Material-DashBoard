@@ -1,0 +1,41 @@
+.form-container{
+    margin-top:1vh ;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:#F4F4F2 ;
+    justify-content: space-around;
+}
+.col{
+    margin: 1% 10% !important;
+}
+.header{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sumbit-row{
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    justify-content: flex-end;
+    height: 5vh;
+}
+@media (max-width:480px){
+    .form-container{
+        align-items: center;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .col{
+        margin: 1% !important;
+    }
+    .sumbit-row{
+        margin-top: 10px;
+        height: 20vh;
+        align-items: flex-start;
+    }    
+}
